@@ -1,0 +1,91 @@
+.bike-price {
+  --price-ink: #aa310f;
+  --price-stripe: #ef5c35;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--price-ink);
+  border-inline-start: 3px solid var(--price-stripe);
+  padding-inline-start: 11px;
+}
+
+.bike-price.price-historical {
+  --price-ink: #393a32;
+  --price-stripe: #8c8d81;
+}
+
+.price-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--price-ink);
+  font: 700 0.62rem/1.2 var(--body);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.price-amount strong {
+  font: 700 clamp(32px, 2.7vw, 46px)/0.96 var(--display);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -0.025em;
+}
+
+.price-amount > span {
+  font: 700 0.61rem/1 var(--body);
+  letter-spacing: 0.08em;
+}
+
+.bike-price.price-unspecified {
+  --price-ink: #55574e;
+  --price-stripe: #aeafa2;
+  font: 600 1.1rem/1.2 var(--display);
+}
+
+.bike-card .card-bottom {
+  flex-direction: row;
+  align-items: end;
+  row-gap: 8px;
+  margin-top: 16px;
+}
+
+.card-bottom .card-facts {
+  line-height: 1.4;
+}
+
+.stage-title .bike-price {
+  --price-ink: #ff855f;
+  --price-stripe: #ff7049;
+  margin-block: 19px 24px;
+  padding-inline-start: 15px;
+}
+
+.stage-title .price-historical,
+.stage-title .price-unspecified {
+  --price-ink: #e3e3d7;
+  --price-stripe: #a3a594;
+}
+
+.stage-title .price-label {
+  color: #eeeee4;
+  margin-bottom: 6px;
+  font-size: 0.68rem;
+}
+
+.stage-title .price-amount strong {
+  font-size: clamp(48px, 4.8vw, 82px);
+}
+
+.stage-title .price-amount > span {
+  font-size: 0.78rem;
+}
+
+@media (max-width: 600px) {
+  .stage-title .bike-price {
+    margin-block: 16px 19px;
+  }
+}
